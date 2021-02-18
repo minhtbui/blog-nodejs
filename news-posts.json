@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "602ce59aeb21c6841e6a8515"
+  },
+  "title": "6 Best Front-end JavaScript Frameworks: Multi-Year Developer Surveys Visualized [2021 Update]",
+  "author": "JSCharting"
+},{
+  "_id": {
+    "$oid": "602ce5ffdbad31200446d883"
+  },
+  "title": "34 JavaScript Optimization Techniques to Know in 2021",
+  "author": "Atit Patel"
+},{
+  "_id": {
+    "$oid": "602ceb71dbad31200446d884"
+  },
+  "title": "22 Utility Functions To Ace Your JavaScript Coding Interview",
+  "author": "Atit Patel"
+}]

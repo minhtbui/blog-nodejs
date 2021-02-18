@@ -11,6 +11,14 @@ const db = require('./config/db');
 // connect db
 db.connect();
 
+//middleware for POST request
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+);
+app.use(express.json());
+
 //static files config
 app.use(express.static(path.join(__dirname, 'public')));
 

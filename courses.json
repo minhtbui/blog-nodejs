@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "602e3ca509cd9217a8644347"
+  },
+  "title": "React / GraphQL Course - Build a social media app (MERNG Stack)",
+  "author": "freeCodeCamp.org",
+  "desc": "Learn how to create a social media app using MongoDB, Express, Node, React, GraphQL, and Node (the MERNG stack).",
+  "videoId": "n1mdAPFq2Os",
+  "img": "https://i3.ytimg.com/vi/n1mdAPFq2Os/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-18T10:08:37.895Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-18T10:08:37.895Z"
+  },
+  "slug": "react-graphql-course-build-a-social-media-app-merng-stack",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602e3cfe09cd9217a8644349"
+  },
+  "title": "GraphQL Full Course - Novice to Expert",
+  "author": "freeCodeCamp.org",
+  "desc": "Complete course on GraphQL where you will create a full-stack application from scratch",
+  "videoId": "ed8SzALpx1Q",
+  "img": "https://i3.ytimg.com/vi/ed8SzALpx1Q/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-18T10:10:06.562Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-18T10:10:06.562Z"
+  },
+  "slug": "graphql-full-course-novice-to-expert",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602e3e2509cd9217a864434a"
+  },
+  "title": "TypeScript Course for Beginners 2021 - Learn TypeScript from Scratch!",
+  "author": " Academind",
+  "desc": "Free TypeScript Introduction for Beginners: Get Started with TypeScript, learn the Basics, its Features, Workflows and how to use it!",
+  "videoId": "BwuLxPH8IDs",
+  "img": "https://i3.ytimg.com/vi/BwuLxPH8IDs/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-18T10:15:01.145Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-18T10:15:01.145Z"
+  },
+  "slug": "typescript-course-for-beginners-2021-learn-typescript-from-scratch",
+  "__v": 0
+}]
