@@ -1,0 +1,112 @@
+<div class="d-flex align-items-center">
+    <h1>Removed Courses</h1>
+    <a class="ms-auto btn" href="/user/stored/courses">Your courses list</a>
+</div>
+
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Updated At</th>
+            <th scope="col" colspan='2'>Modification</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each courses}}
+        <tr>
+            <th scope="row">{{sum @index 1}}</th>
+            <td>{{this.title}}</td>
+            <td>{{this.author}}</td>
+            <td>{{this.updatedAt}}</td>
+            <td><a href="" class='restore-btn'
+                    data-id="{{this._id}}">Restore</a></td>
+            <td><a href="#" data-bs-toggle="modal"
+                    data-bs-target="#cf-delete-modal" data-id='{{this._id}}'
+                    data-title='{{this.title}}'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26"
+                        height="26" fill="currentColor" class="bi bi-trash"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </a></td>
+        </tr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="cf-delete-modal" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger"
+                            id="exampleModalLabel">! WARNING
+                            !</h5>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Your action will delete this course permanently.<br>
+                        Do you want to continue on deleting <strong></strong> ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger"
+                            id='cf-delete-btn'>Delete Permanent</button>
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <tr>
+            <td class="text-center p-5" colspan="5">There is no removed
+                courses.
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<form method='POST' name='remove-course-form'></form>
+<form method='POST' name='restore-course-form'></form>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let courseId;
+        const modal = document.getElementById('cf-delete-modal');
+        const cfRemoveBtn = document.getElementById('cf-delete-btn');
+        const restoreBtns = document.querySelectorAll('.restore-btn')
+        const removeCourseForm = document.forms['remove-course-form'];
+        const restoreCourseForm = document.forms['restore-course-form'];
+
+        // when remove btn is clicked to show Remove modal
+        modal.addEventListener('show.bs.modal', function (e) {
+            const currentDialog = e.relatedTarget;
+            const courseTitle = currentDialog.dataset.title;
+            document.querySelector('strong').textContent = courseTitle;
+            courseId = currentDialog.dataset.id;
+        })
+
+        // when confirm btn is clicked in Remove modal
+        cfRemoveBtn.addEventListener('click', (e) => {
+            removeCourseForm.action = `/courses/${courseId}/force?_method=DELETE`;
+            removeCourseForm.submit();
+        })
+
+        // when restore btn is clicked
+        restoreBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const restoreCourseId = e.target.dataset.id;
+                restoreCourseForm.action = `/courses/${restoreCourseId}/restore?_method=PATCH`;
+                restoreCourseForm.submit();
+            })
+        })
+    })
+</script>

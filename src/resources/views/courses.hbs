@@ -2,16 +2,16 @@
 <div class="row">
     {{#each courses}}
     <div class="card m-3" style="width: 18rem;">
-        <a href="/courses/{{this.title}}">
+        <a href="/courses/{{this.slug}}">
             <img src={{this.img}} class="card-img-top" alt={{this.title}}>
         </a>
         <div class="card-body">
-            <a href="/courses/{{this.title}}">
+            <a href="/courses/{{this.slug}}">
                 <h5 class="card-title">{{this.title}}</h5>
             </a>
             <h6>{{this.author}}</h6>
             <p class="card-text">{{this.desc}}.</p>
-            <a href="/courses/{{this.title}}"
+            <a href="/courses/{{this.slug}}"
                 class="btn btn-primary d-block ">Learn More</a>
         </div>
     </div>
