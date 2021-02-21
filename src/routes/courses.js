@@ -5,6 +5,7 @@ const coursesController = require('../app/controllers/CoursesController');
 
 // POST method
 router.post('/store', coursesController.store);
+router.post('/handle-actions-form', coursesController.handleActionsForm);
 
 // PUT method
 router.put('/:id', coursesController.update);
@@ -13,8 +14,8 @@ router.put('/:id', coursesController.update);
 router.patch('/:id/restore', coursesController.restore);
 
 // DELETE method
-router.delete('/:id', coursesController.delete);
 router.delete('/:id/force', coursesController.deleteForce);
+router.delete('/:id', coursesController.delete);
 
 // GET method
 router.get('/create', coursesController.create);

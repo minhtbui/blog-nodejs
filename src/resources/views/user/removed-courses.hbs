@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center">
     <h1>Removed Courses</h1>
-    <a class="ms-auto btn" href="/user/stored/courses">Your courses list</a>
+    <a class="ms-auto btn" href="/user/stored/courses">My courses list</a>
 </div>
 
 
@@ -10,7 +10,7 @@
             <th scope="col">#</th>
             <th scope="col">Title</th>
             <th scope="col">Author</th>
-            <th scope="col">Updated At</th>
+            <th scope="col">Deleted At</th>
             <th scope="col" colspan='2'>Modification</th>
         </tr>
     </thead>
@@ -20,7 +20,7 @@
             <th scope="row">{{sum @index 1}}</th>
             <td>{{this.title}}</td>
             <td>{{this.author}}</td>
-            <td>{{this.updatedAt}}</td>
+            <td>{{this.deletedAt}}</td>
             <td><a href="" class='restore-btn'
                     data-id="{{this._id}}">Restore</a></td>
             <td><a href="#" data-bs-toggle="modal"

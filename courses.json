@@ -11,10 +11,12 @@
     "$date": "2021-02-18T10:08:37.895Z"
   },
   "updatedAt": {
-    "$date": "2021-02-18T10:08:37.895Z"
+    "$date": "2021-02-21T14:19:56.497Z"
   },
   "slug": "react-graphql-course-build-a-social-media-app-merng-stack",
-  "__v": 0
+  "__v": 0,
+  "deleted": false,
+  "deletedAt": null
 },{
   "_id": {
     "$oid": "602e3cfe09cd9217a8644349"
@@ -28,10 +30,12 @@
     "$date": "2021-02-18T10:10:06.562Z"
   },
   "updatedAt": {
-    "$date": "2021-02-18T10:10:06.562Z"
+    "$date": "2021-02-21T14:19:57.873Z"
   },
   "slug": "graphql-full-course-novice-to-expert",
-  "__v": 0
+  "__v": 0,
+  "deleted": false,
+  "deletedAt": null
 },{
   "_id": {
     "$oid": "602e3e2509cd9217a864434a"
@@ -45,8 +49,105 @@
     "$date": "2021-02-18T10:15:01.145Z"
   },
   "updatedAt": {
-    "$date": "2021-02-18T10:15:01.145Z"
+    "$date": "2021-02-21T14:19:58.944Z"
   },
   "slug": "typescript-course-for-beginners-2021-learn-typescript-from-scratch",
-  "__v": 0
+  "__v": 0,
+  "deleted": false,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "603132e51a227b616831fade"
+  },
+  "deleted": false,
+  "title": "Algorithmic Trading Using Python - Full Course",
+  "author": "freeCodeCamp.org",
+  "desc": "Learn how to perform algorithmic trading using Python in this complete course. Algorithmic trading means using computers to make investment decisions. Computer algorithms can make trades at a speed and frequency that is not possible by a human.",
+  "videoId": "xfzGZB4HhEE",
+  "img": "https://i3.ytimg.com/vi/xfzGZB4HhEE/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-20T16:03:49.335Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T14:19:59.800Z"
+  },
+  "slug": "algorithmic-trading-using-python-full-course",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "6031396d1a227b616831fadf"
+  },
+  "deleted": false,
+  "title": "Build a FullStack Ecommerce with Nextjs, Strapi, Magic and Stripe",
+  "author": " Alex the Entreprenerd",
+  "desc": "Use NextJs with Strapi, Magic, and Stripe, to build an SEO focused eCommerce store.",
+  "videoId": "385cpCpGRC0",
+  "img": "https://i3.ytimg.com/vi/385cpCpGRC0/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-20T16:31:41.547Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T14:20:01.024Z"
+  },
+  "slug": "build-a-fullstack-ecommerce-with-nextjs-strapi-magic-and-stripe",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "603139ea1a227b616831fae0"
+  },
+  "deleted": false,
+  "title": "ECommerce Web Shop - Build & Deploy an Amazing App | React.js, Commerce.js, Stripe",
+  "author": "JavaScript Mastery",
+  "desc": "Learn how to build & deploy a complete eCommerce website. In this video, we're going to build a fully functional eCommerce application using commerce.js. ",
+  "videoId": "377AQ0y6LPA",
+  "img": "https://i3.ytimg.com/vi/377AQ0y6LPA/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-20T16:33:46.547Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T14:20:02.261Z"
+  },
+  "slug": "ecommerce-web-shop-build-and-deploy-an-amazing-app-or-react-js-commerce-js-stripe",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "60313b921a227b616831fae1"
+  },
+  "deleted": false,
+  "title": "React & Node Tutorial - Full ECommerce in 9 Hours [2021]",
+  "author": "Coding with Basir",
+  "desc": "Full ECommerce",
+  "videoId": "TRCDsB9i3bI",
+  "img": "https://i3.ytimg.com/vi/TRCDsB9i3bI/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-20T16:40:50.774Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T14:20:03.325Z"
+  },
+  "slug": "react-and-node-tutorial-full-ecommerce-in-9-hours-2021",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "60314d6768e8913de42d0239"
+  },
+  "deleted": false,
+  "title": "Learn Full Stack - Full Tutorial for Beginners (MongoDB, Reactjs, Nextjs) in 12Hrs (2021)",
+  "author": " Dev A.T Viet Nam",
+  "desc": "👉Build a E-commerce Full Stack with Nextjs + Mongodb + React Hook + Bootstrap 4",
+  "videoId": "XtciU6BnQdo",
+  "img": "https://i3.ytimg.com/vi/XtciU6BnQdo/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-20T17:56:55.856Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T14:20:05.087Z"
+  },
+  "slug": "learn-full-stack-full-tutorial-for-beginners-mongodb-reactjs-nextjs-in-12hrs-2021",
+  "__v": 0,
+  "deletedAt": null
 }]

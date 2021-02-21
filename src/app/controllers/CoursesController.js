@@ -76,6 +76,19 @@ class CoursesController {
             .then(() => res.redirect('back'))
             .catch(next);
     }
+
+    // POST /courses/handle-actions-form
+    handleActionsForm(req, res, next) {
+        switch (req.body.action) {
+            case 'remove':
+                Course.delete({ _id: { $in: req.body.courseIds } })
+                    .then(() => res.redirect('back'))
+                    .catch(next);
+                break;
+            default:
+                res.json({ message: 'Action is not working!' });
+        }
+    }
 }
 
 module.exports = new CoursesController();
