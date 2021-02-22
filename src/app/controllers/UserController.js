@@ -4,7 +4,14 @@ const { dataListToObj, dataToObj } = require('../../util/mongoose');
 class UserController {
     // GET /user/stored/courses
     storedCourses(req, res, next) {
-        Promise.all([Course.find({}), Course.countDocumentsDeleted()])
+        let courseQuery = Course.find({});
+
+        if (req.query.hasOwnProperty('_sort')) {
+            courseQuery = courseQuery.sort({
+                [req.query.field]: req.query.type,
+            });
+        }
+        Promise.all([courseQuery, Course.countDocumentsDeleted()])
             .then(([courses, deletedCourses]) =>
                 res.render('user/stored-courses', {
                     courses: dataListToObj(courses),

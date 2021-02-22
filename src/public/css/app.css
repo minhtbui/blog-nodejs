@@ -1,2 +1,7 @@
+a {
+  color: inherit; }
+  a i {
+    font-size: 18px; }
+
 .course-action-select {
   width: max-content; }

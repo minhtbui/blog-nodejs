@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const sortMiddleware = require('./app/middleware/sortMiddleware');
 const route = require('./routes/index');
 const db = require('./config/db');
 const methodOverride = require('method-override');
@@ -26,6 +27,9 @@ app.use(express.json());
 //static files config
 app.use(express.static(path.join(__dirname, 'public')));
 
+// custom middleware
+app.use(sortMiddleware);
+
 // http logger
 app.use(morgan('combined'));
 
@@ -36,6 +40,27 @@ app.engine(
         extname: '.hbs',
         helpers: {
             sum: (a, b) => a + b,
+            sortable: (field, sort) => {
+                // check which field to sort
+                const sortedField =
+                    field === sort.field ? sort.type : 'default';
+
+                const icons = {
+                    default: 'bi bi-funnel',
+                    asc: 'bi bi-sort-down-alt',
+                    desc: 'bi bi-sort-down',
+                };
+                const types = {
+                    default: 'desc',
+                    asc: 'desc',
+                    desc: 'asc',
+                };
+
+                const icon = icons[sortedField];
+                const type = types[sortedField];
+
+                return ` <a href="?_sort&field=${field}&type=${type}"><i class="${icon}"></i></a>`;
+            },
         },
     }),
 );
