@@ -11,7 +11,7 @@
     "$date": "2021-02-18T10:08:37.895Z"
   },
   "updatedAt": {
-    "$date": "2021-02-21T14:19:56.497Z"
+    "$date": "2021-02-22T04:53:42.069Z"
   },
   "slug": "react-graphql-course-build-a-social-media-app-merng-stack",
   "__v": 0,
@@ -150,4 +150,22 @@
   "slug": "learn-full-stack-full-tutorial-for-beginners-mongodb-reactjs-nextjs-in-12hrs-2021",
   "__v": 0,
   "deletedAt": null
+},{
+  "_id": {
+    "$oid": "6035dcec01b3a34eb8a4f8a6"
+  },
+  "deleted": false,
+  "title": "Data Visualization with D3, JavaScript, React - Full Course [2021]",
+  "author": "freeCodeCamp.org",
+  "desc": "Learn Data Visualization with D3, JavaScript, and React in this 17-hour course.",
+  "videoId": "2LhoCfjm8R4",
+  "img": "https://i3.ytimg.com/vi/2LhoCfjm8R4/hqdefault.jpg",
+  "createdAt": {
+    "$date": "2021-02-24T04:58:20.944Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-24T04:58:20.944Z"
+  },
+  "slug": "data-visualization-with-d3-javascript-react-full-course-2021",
+  "__v": 0
 }]
