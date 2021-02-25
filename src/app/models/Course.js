@@ -17,6 +17,18 @@ const Course = new Schema(
     },
 );
 
+// Query helpers
+Course.query.sortValidate = function (req) {
+    if (req.query.hasOwnProperty('_sort')) {
+        const isValidate = ['desc', 'asc'].includes(req.query.type);
+
+        return this.sort({
+            [req.query.field]: isValidate ? req.query.type : 'desc',
+        });
+    }
+    return this;
+};
+
 // Add plugins
 mongoose.plugin(slug);
 Course.plugin(mongooseDelete, {
